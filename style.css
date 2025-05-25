@@ -20,7 +20,7 @@ body{
 .card{
     display: flex;
     position: relative;
-  overflow: visible; 
+    overflow: visible; 
     background-color: white;
     border-radius: 12px;
     max-width: 750px;
@@ -44,6 +44,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
+
 .card-details h2{
     font-size: 20;
     color:hsl(217, 19%, 35%);
@@ -138,4 +139,51 @@ body{
     width:19px;
     height: 21px;
     cursor: pointer;
+}
+
+/* mobile responsive */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    max-width: 90%;
+    margin:100px 20px !important;
+  }
+
+  .card-image {
+    min-width: 100%;
+    height: 200px;
+  }
+
+  .card-image img {
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .card-details {
+    padding: 1.5rem;
+  }
+
+ 
+
+  .share-popup {
+    display: none; /* هيكون مخفي في البداية */
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(210, 13%, 85%);
+    padding: 27px 55px;
+    margin-right: 69px;
+    border-radius: 0 0 12px 12px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    left: -23px;
+    bottom: -28px;
+   
+  }
+ 
+  .share-popup::after {
+    top: -10px;
+    border-color: transparent transparent hsl(217, 19%, 35%) transparent;
+  }
 }
